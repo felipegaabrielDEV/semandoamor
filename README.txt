@@ -1,0 +1,1 @@
+v17 — favicon incluído; Doe sem botão copiar (PIX grande + caixa de transparência para preencher); Contato sem imagem e colunas alinhadas; melhorias visuais e acessibilidade.
