@@ -1,71 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Mensagem enviada — Semeando Amor</title>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/identidade/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/identidade/favicon.png">
-<link rel="stylesheet" href="assets/css/main.css">
-<script defer src="assets/js/main.js"></script>
+<link href="assets/img/identidade/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/img/identidade/favicon.png" rel="apple-touch-icon"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<script defer="" src="assets/js/main.js"></script>
 <style>.box{background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:var(--shadow);padding:20px;margin:22px 0}</style>
-</head>
+<style>
+/* Escopo: somente sucesso.html */
+.success-wrap{min-height:calc(100vh - 140px);display:flex;align-items:center}
+.success-card{max-width:880px;margin:0 auto;padding:28px 28px 32px;border-radius:16px;background:#fff;border:1px solid #eee;box-shadow:0 14px 36px rgba(0,0,0,.08)}
+.success-card h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:0 0 12px}
+.success-card p{margin:0 0 14px;color:#333}
+.success-actions{margin-top:14px;display:flex;justify-content:center}
+</style></head>
 <body id="topo">
 <header class="site-header">
-  <div class="container navbar">
-    <a class="brand" href="index.html">
-      <img src="assets/img/identidade/logo.png" alt="Logotipo Semeando Amor">
-      <span>Semeando Amor</span>
-    </a>
-    <button class="menu-btn" data-menu aria-label="Abrir menu">☰ Menu</button>
-    <nav aria-label="Principal">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="doe.html">Doe Aqui</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="container navbar">
+<a class="brand" href="index.html">
+<img alt="Logotipo Semeando Amor" src="assets/img/identidade/logo.png"/>
+<span>Semeando Amor</span>
+</a>
+<button aria-label="Abrir menu" class="menu-btn" data-menu="">☰ Menu</button>
+<nav aria-label="Principal">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="sobre.html">Sobre</a></li>
+<li><a href="doe.html">Doe Aqui</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+</div>
 </header>
 <main class="container">
-  <section class="section">
-    <div class="box">
-      <h2>Obrigado! 🎉</h2>
-      <p>Sua mensagem foi enviada.</p>
-      <ul>
-        <li><strong>Se o site estiver no Netlify</strong>, sua resposta já está salva no painel <em>Forms</em>.</li>
-        <li><strong>Se estiver testando localmente</strong>, salvamos uma cópia no seu navegador.</li>
-      </ul>
-      <div id="local-tools" style="display:none;margin-top:12px">
-        <button id="dlCsv" class="btn sm">Baixar CSV local</button>
-        <button id="limpar" class="btn sm secondary">Limpar armazenadas</button>
-        <p class="helper" id="qtd"></p>
-      </div>
-      <p><a class="btn" href="index.html">Voltar à página inicial</a></p>
-    </div>
-  </section>
+<section class="success-wrap section">
+<div class="success-card center">
+<h2>Mensagem enviada com sucesso! 🎉</h2>
+<p>Obrigado por entrar em contato. Recebemos sua mensagem e retornaremos em breve.</p>
+<div id="local-tools" style="display:none;margin-top:12px">
+<button class="btn sm" id="dlCsv">Baixar CSV local</button>
+<button class="btn sm secondary" id="limpar">Limpar armazenadas</button>
+<p class="helper" id="qtd"></p>
+</div>
+<div class="form-actions success-actions center"><a class="btn" href="index.html">Voltar à página inicial</a></div></div>
+</section>
 </main>
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Semeando Amor</h3>
-      <p>Despertando talentos e promovendo dignidade na Comunidade Nova Esperança (Olaria).</p>
-    </div>
-    <div>
-      <h3>Doações</h3>
-      <p><strong>PIX:</strong> 55168291000113 <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button></p>
-      <p>Fav.: Associação Semeando Amor • CNPJ 55.168.291/0001-13</p>
-      <p>Banco Stone (197) • Ag. 0001 • Conta 40480812-3</p>
-    </div>
-    <div>
-      <h3>Contato</h3>
-      <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913‑0292</a></p>
-      <p>E‑mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/semeandoamoraju" target="_blank" rel="noopener">@semeandoamoraju</a></p>
-    </div>
-  </div>
-  <div class="container footer-legal"><small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small></div>
-</footer>
+
 <script>
 (function(){
   const key='sa_submissoes';
