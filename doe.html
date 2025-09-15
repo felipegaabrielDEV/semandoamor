@@ -1,25 +1,40 @@
-<!doctype html>
-<html lang='pt-BR'>
+<!doctype html> <!-- Define que o documento é HTML5 -->
+<html lang='pt-BR'> <!-- Idioma da página: português do Brasil -->
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8"> <!-- Codificação de caracteres UTF-8 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Faz o site ser responsivo -->
+
+  <!-- Título que aparece na aba do navegador -->
   <title>Doe Aqui — Semeando Amor</title>
+
+  <!-- Ícone do site (favicon) que aparece na aba do navegador -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/identidade/favicon.png">
+
+  <!-- Ícone usado quando adiciona o site na tela inicial do iPhone/iPad -->
   <link rel="apple-touch-icon" href="assets/img/identidade/favicon.png">
+
+  <!-- Arquivo CSS principal para estilos -->
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Arquivo JavaScript principal para funcionalidades -->
   <script defer src="assets/js/main.js"></script>
 </head>
 
-<body id='topo'><a class='skip-link' href='#conteudo'>Pular para o conteúdo</a>
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="index.html">
-        <img src="assets/img/identidade/logo.png" alt="Logotipo Semeando Amor">
-        <span>Semeando Amor</span>
+<body id='topo'> <!-- Corpo da página, com id "topo" (usado no botão de voltar ao topo) -->
+  <a class='skip-link' href='#conteudo'>Pular para o conteúdo</a>
+  <!-- Link de acessibilidade para ir direto ao conteúdo -->
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header"> <!-- Cabeçalho -->
+    <div class="container navbar"> <!-- Container que organiza logo e menu -->
+      <a class="brand" href="index.html"> <!-- Logo + link para página inicial -->
+        <img src="assets/img/identidade/logo.png" alt="Logotipo Semeando Amor"> <!-- Imagem da logo -->
+        <span>Semeando Amor</span> <!-- Nome da ONG -->
       </a>
       <button class="menu-btn" data-menu aria-label="Abrir menu">☰ Menu</button>
-      <nav aria-label="Principal">
+      <!-- Botão para abrir menu no mobile -->
+      <nav aria-label="Principal"> <!-- Navegação principal -->
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
@@ -29,38 +44,50 @@
       </nav>
     </div>
   </header>
-  <section class="hero">
-    <div class="bg"></div>
-    <div class="container content">
-      <span class="badge">ONG Real</span>
-      <h1>Doe e semeie dignidade</h1>
-      <p>Sua ajuda vira acolhimento, oficinas e comida quente.</p>
-      <div class="cta">
+
+  <!-- =================== HERO =================== -->
+  <section class="hero"> <!-- Seção de destaque -->
+    <div class="bg"></div> <!-- Fundo decorativo -->
+    <div class="container content"> <!-- Conteúdo central -->
+      <span class="badge">ONG Real</span> <!-- Selo -->
+      <h1>Doe e semeie dignidade</h1> <!-- Título -->
+      <p>Sua ajuda vira acolhimento, oficinas e comida quente.</p> <!-- Texto -->
+      <div class="cta"> <!-- Call to Action -->
         <a class="btn" href="doe.html">Doe Agora</a>
         <a class="btn" href="sobre.html">Conhecer a história</a>
       </div>
     </div>
   </section>
+
+  <!-- =================== CONTEÚDO PRINCIPAL =================== -->
   <main id='conteudo' class='container'>
+
+    <!-- Seção PIX -->
     <section class="section" id="pix">
       <h2>Doação via PIX</h2>
       <p class="lead">Rápido e seguro — cada contribuição mantém as ações e multiplica oportunidades.</p>
-      <div class="grid cards" style="grid-template-columns:1.2fr 1fr">
+
+      <div class="grid cards" style="grid-template-columns:1.2fr 1fr"> <!-- Layout: instruções + QR code -->
+
+        <!-- Instruções PIX -->
         <div class="card">
           <div class="body">
-            <ol style="margin-bottom:8px">
+            <ol style="margin-bottom:8px"> <!-- Lista numerada de passos -->
               <li>Abra o app do seu banco → <strong>PIX</strong></li>
               <li>Informe a chave: <code class="pix big">55168291000113</code></li>
               <li>Confira: <strong>Associação Semeando Amor</strong> — CNPJ 55.168.291/0001-13</li>
               <li>Confirme o valor e salve o comprovante</li>
             </ol>
+            <!-- Box de transparência -->
             <div class="card" style="border:1px dashed #e9e9e9;background:#fcfcfc">
               <div class="body">
                 <strong>Transparência & recibo</strong>
-                <p class="helper">Envie o comprovante para recibo: WhatsApp <a href="https://wa.me/5579999130292"
-                    target="_blank" rel="noopener">(79) 99913‑0292</a> ou e‑mail <a
-                    href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a>.</p>
-                <ul class="helper" style="margin:0 0 4px 16px">
+                <p class="helper">Envie o comprovante para recibo: WhatsApp
+                  <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913-0292</a>
+                  ou e-mail
+                  <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a>.
+                </p>
+                <ul class="helper" style="margin:0 0 4px 16px"> <!-- Observações -->
                   <li>Use apenas a chave acima (CNPJ).</li>
                   <li>Em caso de dúvida, fale com nosso WhatsApp.</li>
                 </ul>
@@ -68,18 +95,22 @@
             </div>
           </div>
         </div>
+
+        <!-- QR Code PIX -->
         <div class="card">
           <div class="body center">
             <img src="assets/img/identidade/qr-pix.png" alt="QR Code PIX" loading="lazy"
-              style="max-width:260px;border:1px solid #eee;border-radius:12px;">
+              style="max-width:260px;border:1px solid #eee;border-radius:12px;"> <!-- QR Code -->
             <p><small>Escaneie o QR para doar</small></p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Seção Transferência -->
     <section class="section" id="transferencia" style="padding-top:20px">
       <h2>Transferência bancária</h2>
-      <div class="grid kpis">
+      <div class="grid kpis"> <!-- Dados bancários -->
         <div class="kpi">
           <div>Banco</div><strong>Stone (197)</strong>
         </div>
@@ -87,16 +118,18 @@
           <div>Agência</div><strong>0001</strong>
         </div>
         <div class="kpi">
-          <div>Conta</div><strong>40480812‑3</strong>
+          <div>Conta</div><strong>40480812-3</strong>
         </div>
         <div class="kpi">
           <div>Titular</div><strong>Associação Semeando Amor</strong>
         </div>
       </div>
     </section>
+
+    <!-- Seção Doação de Itens -->
     <section class="section" id="itens" style="padding-top:20px">
       <h2>Doação de itens</h2>
-      <table class="table">
+      <table class="table"> <!-- Tabela de doações -->
         <thead>
           <tr>
             <th>Item prioritário</th>
@@ -124,31 +157,42 @@
       </table>
     </section>
   </main>
+
+  <!-- =================== RODAPÉ =================== -->
   <footer class="site-footer">
     <div class="container footer-grid">
+      <!-- Coluna 1 -->
       <div>
         <h3>Semeando Amor</h3>
         <p>Despertando talentos e promovendo dignidade na Comunidade Nova Esperança (Olaria).</p>
       </div>
+      <!-- Coluna 2 -->
       <div>
         <h3>Doações</h3>
-        <p><strong>PIX:</strong> 55168291000113 <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button>
+        <p><strong>PIX:</strong> 55168291000113
+          <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button> <!-- Botão copiar PIX -->
         </p>
         <p>Fav.: Associação Semeando Amor • CNPJ 55.168.291/0001-13</p>
         <p>Banco Stone (197) • Ag. 0001 • Conta 40480812-3</p>
       </div>
+      <!-- Coluna 3 -->
       <div>
         <h3>Contato</h3>
-        <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913‑0292</a></p>
-        <p>E‑mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913-0292</a></p>
+        <p>E-mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
         <p>Instagram: <a href="https://instagram.com/semeandoamoraju" target="_blank"
             rel="noopener">@semeandoamoraju</a></p>
       </div>
     </div>
-    <div class="container footer-legal"><small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
+    <div class="container footer-legal">
+      <small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
     </div>
-  </footer><a id="backtop" class="btn secondary backtop" href="#topo" aria-label="Voltar ao topo">↑ Topo</a><a
-    class="btn fab-donate" href="doe.html" aria-label="Doar agora">Doe Agora</a>
+  </footer>
+
+  <!-- =================== BOTÕES FIXOS =================== -->
+  <a id="backtop" class="btn secondary backtop" href="#topo" aria-label="Voltar ao topo">↑ Topo</a>
+  <!-- Voltar ao topo -->
+  <a class="btn fab-donate" href="doe.html" aria-label="Doar agora">Doe Agora</a> <!-- Botão fixo de doação -->
 </body>
 
 </html>
