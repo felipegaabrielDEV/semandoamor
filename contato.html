@@ -1,188 +1,148 @@
-<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
-<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta charset="utf-8" />
   <meta content="width=device-width,initial-scale=1" name="viewport" />
-  <!-- Faz o site ser responsivo em dispositivos móveis -->
-
-  <!-- Título que aparece na aba do navegador -->
+  <!-- Título da página do site -->
   <title>Contato — Semeando Amor</title>
-
-  <!-- Ícone do site (favicon) que aparece na aba do navegador -->
+  <!--Puxando a referência do ícone do site-->
   <link href="assets/img/identidade/favicon.png" rel="icon" sizes="32x32" type="image/png" />
-
-  <!-- Ícone para iPhone/iPad (quando o site é adicionado à tela inicial) -->
+  <!-- Ícone para iPhone/iPad (aparece ao adicionar o site à tela inicial)  -->
   <link href="assets/img/identidade/favicon.png" rel="apple-touch-icon" />
-
-  <!-- Arquivo CSS principal do site -->
+  <!-- “Puxando o arquivo CSS para fazer a estilização -->
   <link href="assets/css/main.css" rel="stylesheet" />
-
-  <!-- Arquivo JavaScript principal do site (carregado em segundo plano por "defer") -->
-  <script defer src="assets/js/main.js"></script>
+  <!-- Puxando o arquivo JavaScript para fazer as funcionalidades -->
+  <script defer="" src="assets/js/main.js"></script>
 </head>
 
-<body id='topo'> <!-- Início do corpo da página, com id "topo" usado no botão de voltar ao início -->
-  <a class='skip-link' href='#conteudo'>Pular para o conteúdo</a>
-  <!-- Link de acessibilidade para ir direto ao conteúdo -->
-
-  <!-- =================== HEADER =================== -->
-  <header class="site-header"> <!-- Cabeçalho do site -->
-    <div class="container navbar"> <!-- Container que organiza logo e menu -->
-
-      <a class="brand" href="index.html"> <!-- Link da logo que leva para a página inicial -->
-        <img src="assets/img/identidade/logo.png" alt="Logotipo Semeando Amor"> <!-- Logo do site -->
-        <span>Semeando Amor</span> <!-- Texto ao lado da logo -->
+<body id="topo"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <img alt="Logotipo Semeando Amor" src="assets/img/identidade/logo.png" />
+        <span>Semeando Amor</span>
       </a>
-
-      <button class="menu-btn" data-menu aria-label="Abrir menu">☰ Menu</button> <!-- Botão de menu para mobile -->
-
-      <nav aria-label="Principal"> <!-- Menu de navegação principal -->
+      <button aria-label="Abrir menu" class="menu-btn" data-menu="">☰ Menu</button>
+      <nav aria-label="Principal">
         <ul>
-          <li><a href="index.html">Início</a></li> <!-- Link: Início -->
-          <li><a href="sobre.html">Sobre</a></li> <!-- Link: Sobre -->
-          <li><a href="doe.html">Doe Aqui</a></li> <!-- Link: Doações -->
-          <li><a href="contato.html">Contato</a></li> <!-- Link: Contato -->
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="doe.html">Doe Aqui</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
-  <!-- =================== HERO =================== -->
-  <section class="hero"> <!-- Seção de destaque (banner inicial) -->
-    <div class="bg"></div> <!-- Fundo decorativo -->
-    <div class="container content"> <!-- Conteúdo centralizado -->
-      <span class="badge">ONG Real</span> <!-- Selo em destaque -->
-      <h1>Semeando Amor na Comunidade Nova Liberdade</h1> <!-- Título principal -->
-      <p>Acolhimento, desenvolvimento humano e segurança alimentar — com amor e participação comunitária.</p>
-      <!-- Texto explicativo -->
-      <div class="cta"> <!-- Call To Action (botões principais) -->
-        <a class="btn" href="doe.html">Doe Agora</a> <!-- Botão de doação -->
-        <a class="btn" href="sobre.html">Conhecer a história</a> <!-- Botão para página sobre -->
+  <section class="hero">
+    <div class="bg"></div>
+    <div class="container content">
+      <span class="badge">ONG Real</span>
+      <h1>Estamos por aqui</h1>
+      <p>Casa Sede — Comunidade Nova Esperança (Olaria).</p>
+      <div class="cta">
+        <a class="btn" href="doe.html">Doe Agora</a>
+        <a class="btn" href="sobre.html">Conhecer a história</a>
       </div>
     </div>
   </section>
-
-  <!-- =================== CONTEÚDO PRINCIPAL =================== -->
-  <main id='conteudo' class='container'> <!-- Conteúdo principal -->
-    <section class="section" id="inicio"> <!-- Seção "O que fazemos" -->
-      <h2>O que fazemos</h2> <!-- Subtítulo da seção -->
-      <p class="lead">Acolhimento semanal, ações nas ruas, segurança alimentar e oficinas.</p>
-      <!-- Texto de destaque -->
-
-      <div class="grid cards"> <!-- Grade de cards -->
-
-        <!-- Card 1 -->
-        <article class="card">
+  <main class="container" id="conteudo">
+    <section class="section" id="fale">
+      <h2>Fale com a gente</h2>
+      <p class="lead">Responderemos o quanto antes. Seus dados serão usados apenas para retorno (LGPD).</p>
+      <div class="grid cards equal" style="grid-template-columns:1fr 1fr">
+        <div class="card">
           <div class="body">
-            <h3>Acolhimento semanal</h3>
-            <p>Grupos de escuta e apoio psicossocial.</p>
+            <form action="https://formsubmit.co/projetosemeandoamor.aju@gmail.com" id="contatoForm" method="POST">
+              <input type="hidden" name="_next" value="sucesso.html">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="box">
+              <input name="_honey" style="display:none" type="text" /><input name="_captcha" type="hidden"
+                value="false" /><input name="_subject" type="hidden" value="Novo contato - Semeando Amor" />
+              <input name="form-name" type="hidden" value="contato" />
+              <div class="field"><label for="nome">Nome</label><input id="nome" name="nome"
+                  placeholder="Seu nome completo" required="" /></div>
+              <div class="field"><label for="email">E‑mail</label><input id="email" name="_replyto"
+                  placeholder="seuemail@exemplo.com" required="" type="email" /></div>
+              <div class="field"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem"
+                  placeholder="Como podemos ajudar?" required="" rows="5"></textarea></div>
+              <!-- honeypot -->
+              <input aria-hidden="true" autocomplete="off" name="website" style="display:none" tabindex="-1"
+                type="text" />
+              <div class="consent-row"><label class="consent"><input name="consent" required="" type="checkbox"
+                    value="sim" /> Autorizo o uso dos meus dados para retorno deste contato.</label></div>
+              <p aria-live="polite" class="helper" id="formStatus" role="status"></p>
+              <div class="form-actions center"><button class="btn" id="btnEnviar" type="submit">Enviar</button></div>
+            </form>
           </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="card">
+        </div>
+        <div class="card">
           <div class="body">
-            <h3>Ações nas ruas</h3>
-            <p>Refeições, kits de higiene e escuta ativa.</p>
+            <h3>Contato direto</h3>
+            <div class="helper">
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/5579999130292" rel="noopener" target="_blank">(79)
+                  99913‑0292</a></p>
+              <p><strong>E‑mail:</strong> <a
+                  href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
+              <p><strong>Instagram:</strong> <a href="https://instagram.com/semeandoamoraju" rel="noopener"
+                  target="_blank">@semeandoamoraju</a></p>
+              <p><strong>Casa Sede:</strong> Olaria — Comunidade Nova Esperança</p>
+            </div>
+            <div style="margin-top:auto">
+              <p class="helper">Atendimento presencial mediante agendamento.</p>
+            </div>
           </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="card">
-          <div class="body">
-            <h3>Segurança alimentar</h3>
-            <p>Campanhas e doações mensais de cestas básicas.</p>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="card">
-          <div class="body">
-            <h3>Oficinas e capacitação</h3>
-            <p>Renda e autonomia com oficineiros locais.</p>
-          </div>
-        </article>
+        </div>
       </div>
-
-      <!-- Imagem extra abaixo dos cards -->
-      <figure class="card" style="margin-top:18px">
-        <img class="img-cover" src="assets/img/galeria/foto-03.png"
-          alt="Equipe Semeando Amor em ação entregando doações">
-      </figure>
     </section>
   </main>
-
-  <!-- =================== RODAPÉ =================== -->
-  <footer class="site-footer"> <!-- Rodapé -->
-    <div class="container footer-grid"> <!-- Rodapé dividido em colunas -->
-
-      <!-- Coluna 1 -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div>
         <h3>Semeando Amor</h3>
         <p>Despertando talentos e promovendo dignidade na Comunidade Nova Esperança (Olaria).</p>
       </div>
-
-      <!-- Coluna 2 -->
       <div>
         <h3>Doações</h3>
-        <p><strong>PIX:</strong> 55168291000113
-          <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button> <!-- Botão para copiar o PIX -->
+        <p><strong>PIX:</strong> 55168291000113 <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button>
         </p>
         <p>Fav.: Associação Semeando Amor • CNPJ 55.168.291/0001-13</p>
         <p>Banco Stone (197) • Ag. 0001 • Conta 40480812-3</p>
       </div>
-
-      <!-- Coluna 3 -->
       <div>
         <h3>Contato</h3>
-        <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913-0292</a></p>
-        <p>E-mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/semeandoamoraju" target="_blank"
-            rel="noopener">@semeandoamoraju</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5579999130292" rel="noopener" target="_blank">(79) 99913‑0292</a></p>
+        <p>E‑mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/semeandoamoraju" rel="noopener"
+            target="_blank">@semeandoamoraju</a></p>
       </div>
     </div>
-
-    <!-- Créditos finais -->
-    <div class="container footer-legal">
-      <small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
+    <div class="container footer-legal"><small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
     </div>
-  </footer>
-
-  <!-- =================== BOTÕES FIXOS =================== -->
-  <a id="backtop" class="btn secondary backtop" href="#topo" aria-label="Voltar ao topo">↑ Topo</a>
-  <!-- Botão flutuante para voltar ao topo -->
-  <a class="btn fab-donate" href="doe.html" aria-label="Doar agora">Doe Agora</a> <!-- Botão flutuante de doação -->
-
-  <!-- =================== SCRIPT DO FORMULÁRIO =================== -->
+  </footer><a aria-label="Voltar ao topo" class="btn secondary backtop" href="#topo" id="backtop">↑ Topo</a>
   <script>
-    (function () { // Função anônima autoexecutável para isolar o código
-      var f = document.getElementById('contatoForm'); // Seleciona o formulário com id "contatoForm"
-      if (!f) return; // Se não existir formulário, encerra aqui
-
-      f.addEventListener('submit', async function (e) { // Evento ao enviar o formulário
-        e.preventDefault(); // Impede o envio padrão (recarregar a página)
-
+    (function () {
+      var f = document.getElementById('contatoForm');
+      if (!f) return;
+      f.addEventListener('submit', async function (e) {
+        e.preventDefault();
         try {
-          var fd = new FormData(f); // Cria objeto com os dados do formulário
-          // Envia os dados via requisição AJAX para o FormSubmit
+          var fd = new FormData(f);
           var r = await fetch('https://formsubmit.co/ajax/projetosemeandoamor.aju@gmail.com', {
-            method: 'POST', // Método de envio
-            body: fd, // Dados do formulário
-            headers: { 'Accept': 'application/json' } // Cabeçalho para receber resposta em JSON
+            method: 'POST',
+            body: fd,
+            headers: { 'Accept': 'application/json' }
           });
-
-          if (r.ok) { // Se deu tudo certo no envio
-            window.location.href = 'sucesso.html'; // Redireciona para página de sucesso
-          } else { // Se houve erro no envio
+          if (r.ok) {
+            window.location.href = 'sucesso.html';
+          } else {
             alert('Não foi possível enviar agora. Tente novamente em instantes.');
           }
-        } catch (err) { // Se ocorrer erro de conexão
+        } catch (err) {
           alert('Falha de conexão. Verifique sua internet e tente novamente.');
         }
       });
-    })();
-  </script>
+    })();</script>
 </body>
 
 </html>
