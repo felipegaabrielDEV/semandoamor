@@ -1,31 +1,51 @@
 <!doctype html>
+<!-- Define o documento como HTML5 -->
 <html lang='pt-BR'>
+<!-- Define o idioma principal da página como Português do Brasil -->
 
 <head>
+  <!-- Codificação de caracteres (suporta acentos) -->
   <meta charset="utf-8">
+
+  <!-- Responsividade: ajusta a largura à tela do dispositivo -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- Título da página do site -->
+
+  <!-- Título mostrado na aba do navegador e nos resultados de busca -->
   <title>Sobre — Semeando Amor</title>
-  <!--Puxando a referência do ícone do site-->
+
+  <!-- Ícone da aba do navegador (favicon) -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/identidade/favicon.png">
-  <!-- Ícone para iPhone/iPad (aparece ao adicionar o site à tela inicial)  -->
+
+  <!-- Ícone quando o site é adicionado à tela inicial do iOS -->
   <link rel="apple-touch-icon" href="assets/img/identidade/favicon.png">
-  <!-- “Puxando o arquivo CSS para fazer a estilização -->
+
+  <!-- Arquivo de estilos principal do site -->
   <link rel="stylesheet" href="assets/css/main.css">
-  <!-- Puxando o arquivo JavaScript para fazer as funcionalidades -->
+
+  <!-- JavaScript principal do site (defer: executa após carregar o HTML) -->
   <script defer src="assets/js/main.js"></script>
 </head>
 
-<body id='topo'><a class='skip-link' href='#conteudo'>Pular para o conteúdo</a>
+<body id='topo'>
+  <!-- Link de acessibilidade: permite pular direto para o conteúdo principal -->
+  <a class='skip-link' href='#conteudo'>Pular para o conteúdo</a>
+
+  <!-- Cabeçalho do site com logo e navegação -->
   <header class="site-header">
     <div class="container navbar">
+      <!-- Marca/Logo que leva para a página inicial -->
       <a class="brand" href="index.html">
         <img src="assets/img/identidade/logo.png" alt="Logotipo Semeando Amor">
         <span>Semeando Amor</span>
       </a>
+
+      <!-- Botão do menu para dispositivos móveis (controlado via JS pelo atributo data-menu) -->
       <button class="menu-btn" data-menu aria-label="Abrir menu">☰ Menu</button>
+
+      <!-- Navegação principal do site -->
       <nav aria-label="Principal">
         <ul>
+          <!-- Itens de menu para navegar entre páginas -->
           <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="doe.html">Doe Aqui</a></li>
@@ -34,40 +54,64 @@
       </nav>
     </div>
   </header>
+
+  <!-- Seção de destaque (hero/banner) no topo da página -->
   <section class="hero">
+    <!-- Elemento de fundo decorativo (geralmente estilizado no CSS) -->
     <div class="bg"></div>
+
+    <!-- Conteúdo textual e CTAs do banner -->
     <div class="container content">
       <span class="badge">ONG Real</span>
+
+      <!-- Título principal desta página -->
       <h1>Amor que vira ação</h1>
+
+      <!-- Subtítulo/descrição curta -->
       <p>De um gesto entre amigos a uma rede de apoio contínua.</p>
+
+      <!-- Chamadas para ação: levar a doar ou ler mais -->
       <div class="cta">
         <a class="btn" href="doe.html">Doe Agora</a>
         <a class="btn" href="sobre.html">Conhecer a história</a>
       </div>
     </div>
   </section>
+
+  <!-- Conteúdo principal da página -->
   <main id='conteudo' class='container'>
+    <!-- Seção “Nossa história” -->
     <section class="section" id="historia">
       <h2>Nossa história</h2>
-      <p class="lead">Dos anos 2000 à casa sede reaberta em 2024 — uma caminhada feita de encontros, doações e muito
-        acolhimento.</p>
+
+      <!-- Texto introdutório em destaque (lead) -->
+      <p class="lead">
+        Dos anos 2000 à casa sede reaberta em 2024 — uma caminhada feita de encontros, doações e muito acolhimento.
+      </p>
+
+      <!-- Três cards com Missão, Visão e Valores -->
       <div class="grid cards">
+        <!-- Card: Missão -->
         <div class="card">
           <div class="body">
             <h3>Missão</h3>
-            <p>Despertar talentos e promover dignidade por meio de acolhimento, educação, saúde integrativa e segurança
-              alimentar.</p>
+            <p>Despertar talentos e promover dignidade por meio de acolhimento, educação, saúde integrativa e segurança alimentar.</p>
           </div>
         </div>
+
+        <!-- Card: Visão -->
         <div class="card">
           <div class="body">
             <h3>Visão</h3>
             <p>Consolidar a casa sede como polo comunitário — rumo à casa própria.</p>
           </div>
         </div>
+
+        <!-- Card: Valores -->
         <div class="card">
           <div class="body">
             <h3>Valores</h3>
+            <!-- Lista não ordenada dos valores -->
             <ul>
               <li>Amor e acolhimento</li>
               <li>Empatia e respeito</li>
@@ -77,15 +121,21 @@
           </div>
         </div>
       </div>
+
+      <!-- Título da linha do tempo (com margem superior para afastar dos cards) -->
       <h2 style="margin-top:18px">Linha do tempo</h2>
+
+      <!-- Tabela semântica para apresentar períodos e marcos -->
       <table class="table">
         <thead>
           <tr>
+            <!-- Cabeçalhos das colunas -->
             <th>Período</th>
             <th>Marco</th>
           </tr>
         </thead>
         <tbody>
+          <!-- Linhas com eventos históricos/etapas -->
           <tr>
             <td>Anos 2000</td>
             <td>Eventos culturais e doações a instituições</td>
@@ -102,31 +152,49 @@
       </table>
     </section>
   </main>
+
+  <!-- Rodapé do site com informações institucionais, doações e contato -->
   <footer class="site-footer">
     <div class="container footer-grid">
+      <!-- Bloco institucional -->
       <div>
         <h3>Semeando Amor</h3>
         <p>Despertando talentos e promovendo dignidade na Comunidade Nova Esperança (Olaria).</p>
       </div>
+
+      <!-- Bloco com dados para doações -->
       <div>
         <h3>Doações</h3>
-        <p><strong>PIX:</strong> 55168291000113 <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button>
+        <p>
+          <strong>PIX:</strong> 55168291000113
+          <!-- Botão que aciona função JS para copiar a chave PIX (função esperada no main.js) -->
+          <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button>
         </p>
         <p>Fav.: Associação Semeando Amor • CNPJ 55.168.291/0001-13</p>
         <p>Banco Stone (197) • Ag. 0001 • Conta 40480812-3</p>
       </div>
+
+      <!-- Bloco com formas de contato -->
       <div>
         <h3>Contato</h3>
-        <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913‑0292</a></p>
-        <p>E‑mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/semeandoamoraju" target="_blank"
-            rel="noopener">@semeandoamoraju</a></p>
+        <!-- target="_blank": abre em nova aba | rel="noopener": segurança/performance ao abrir nova aba -->
+        <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913-0292</a></p>
+        <p>E-mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/semeandoamoraju" target="_blank" rel="noopener">@semeandoamoraju</a></p>
       </div>
     </div>
-    <div class="container footer-legal"><small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
+
+    <!-- Linha legal/créditos no rodapé -->
+    <div class="container footer-legal">
+      <small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
     </div>
-  </footer><a id="backtop" class="btn secondary backtop" href="#topo" aria-label="Voltar ao topo">↑ Topo</a><a
-    class="btn fab-donate" href="doe.html" aria-label="Doar agora">Doe Agora</a>
+  </footer>
+
+  <!-- Botão âncora para voltar ao topo da página (acessível a leitores de tela) -->
+  <a id="backtop" class="btn secondary backtop" href="#topo" aria-label="Voltar ao topo">↑ Topo</a>
+
+  <!-- Botão flutuante para doação (fica visível sobre o conteúdo) -->
+  <a class="btn fab-donate" href="doe.html" aria-label="Doar agora">Doe Agora</a>
 </body>
 
 </html>

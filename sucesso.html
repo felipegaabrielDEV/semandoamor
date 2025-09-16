@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-
+<!-- Define o documento como HTML5 -->
 <html lang="pt-BR">
+<!-- Idioma definido para português do Brasil -->
 
 <head>
+  <!-- Codificação de caracteres (UTF-8 garante suporte a acentos) -->
   <meta charset="utf-8" />
+
+  <!-- Ajusta a página para telas menores (responsividade) -->
   <meta content="width=device-width,initial-scale=1" name="viewport" />
-  <!-- Título da página do site -->
+
+  <!-- Título exibido na aba do navegador -->
   <title>Mensagem enviada — Semeando Amor</title>
-  <!--Puxando a referência do ícone do site-->
+
+  <!-- Ícone da aba do navegador -->
   <link href="assets/img/identidade/favicon.png" rel="icon" sizes="32x32" type="image/png" />
-  <!-- Ícone para iPhone/iPad (aparece ao adicionar o site à tela inicial)  -->
+
+  <!-- Ícone para iPhone/iPad quando o site é adicionado à tela inicial -->
   <link href="assets/img/identidade/favicon.png" rel="apple-touch-icon" />
-  <!-- “Puxando o arquivo CSS para fazer a estilização -->
+
+  <!-- Arquivo CSS principal -->
   <link href="assets/css/main.css" rel="stylesheet" />
-  <!-- Puxando o arquivo JavaScript para fazer as funcionalidades -->
-  <script defer="" src="assets/js/main.js"></script>
+
+  <!-- Arquivo JavaScript principal -->
+  <script defer src="assets/js/main.js"></script>
+
+  <!-- Estilização local para caixas gerais (somente sucesso.html) -->
   <style>
     .box {
       background: #fff;
@@ -25,6 +36,8 @@
       margin: 22px 0
     }
   </style>
+
+  <!-- Estilização exclusiva do layout de sucesso -->
   <style>
     /* Escopo: somente sucesso.html */
     .success-wrap {
@@ -62,13 +75,19 @@
 </head>
 
 <body id="topo">
+  <!-- Cabeçalho do site -->
   <header class="site-header">
     <div class="container navbar">
+      <!-- Logo que volta para a página inicial -->
       <a class="brand" href="index.html">
         <img alt="Logotipo Semeando Amor" src="assets/img/identidade/logo.png" />
         <span>Semeando Amor</span>
       </a>
-      <button aria-label="Abrir menu" class="menu-btn" data-menu="">☰ Menu</button>
+
+      <!-- Botão do menu mobile -->
+      <button aria-label="Abrir menu" class="menu-btn" data-menu>☰ Menu</button>
+
+      <!-- Navegação principal -->
       <nav aria-label="Principal">
         <ul>
           <li><a href="index.html">Início</a></li>
@@ -79,39 +98,81 @@
       </nav>
     </div>
   </header>
+
+  <!-- Conteúdo principal -->
   <main class="container">
     <section class="success-wrap section">
       <div class="success-card center">
+        <!-- Mensagem principal de confirmação -->
         <h2>Mensagem enviada com sucesso! 🎉</h2>
         <p>Obrigado por entrar em contato. Recebemos sua mensagem e retornaremos em breve.</p>
+
+        <!-- Ferramentas locais (aparecem só em testes locais com localStorage) -->
         <div id="local-tools" style="display:none;margin-top:12px">
           <button class="btn sm" id="dlCsv">Baixar CSV local</button>
           <button class="btn sm secondary" id="limpar">Limpar armazenadas</button>
           <p class="helper" id="qtd"></p>
         </div>
-        <div class="form-actions success-actions center"><a class="btn" href="index.html">Voltar à página inicial</a>
+
+        <!-- Botão de retorno para a página inicial -->
+        <div class="form-actions success-actions center">
+          <a class="btn" href="index.html">Voltar à página inicial</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Script específico da página -->
   <script>
     (function () {
+      // Nome da chave usada para guardar dados no localStorage
       const key = 'sa_submissoes';
+
+      // Recupera dados salvos no navegador ou cria array vazio
       const arr = JSON.parse(localStorage.getItem(key) || '[]');
+
+      // Se não estiver em ambiente local (isLocal) ou não houver registros → não mostra nada
       if (!isLocal || arr.length === 0) return;
+
+      // Exibe as ferramentas locais (div que estava oculta)
       document.getElementById('local-tools').style.display = 'block';
+
+      // Mostra quantidade de registros armazenados
       document.getElementById('qtd').textContent = arr.length + ' registro(s) salvos localmente.';
+
+      // Função para escapar valores corretamente em CSV (coloca aspas e trata aspas duplas)
       function csvEscape(s) { return ('"' + String(s).replaceAll('"', '""') + '"'); }
+
+      // Ação do botão "Baixar CSV local"
       document.getElementById('dlCsv').addEventListener('click', () => {
+        // Cabeçalho do CSV
         const header = ['Data', 'Nome', 'Email', 'Mensagem', 'Consent'];
+
+        // Transforma cada objeto salvo em um array de valores
         const rows = arr.map(o => [o.ts, o.nome, o.email, o.mensagem, o.consent]);
+
+        // Junta cabeçalho + linhas e monta a string CSV
         const csv = [header].concat(rows).map(r => r.map(csvEscape).join(',')).join('\n');
+
+        // Cria um arquivo temporário (Blob) no formato CSV
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'contatos-local.csv'; a.click();
+
+        // Cria um link <a> invisível para disparar o download
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'contatos-local.csv';
+        a.click(); // Simula clique para baixar
       });
-      document.getElementById('limpar').addEventListener('click', () => { localStorage.removeItem(key); location.reload(); });
-    })();
+
+      // Ação do botão "Limpar armazenadas"
+      document.getElementById('limpar').addEventListener('click', () => {
+        // Remove a chave do localStorage
+        localStorage.removeItem(key);
+
+        // Recarrega a página para atualizar a interface
+        location.reload();
+      });
+    })(); // Função autoexecutada (IIFE)
   </script>
 </body>
 

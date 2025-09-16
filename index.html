@@ -1,31 +1,51 @@
 <!doctype html>
+<!-- Define o tipo de documento como HTML5 -->
 <html lang='pt-BR'>
+<!-- Define o idioma principal da página como Português do Brasil -->
 
 <head>
+  <!-- Define a codificação de caracteres como UTF-8 (suporta acentos e caracteres especiais) -->
   <meta charset="utf-8">
+
+  <!-- Faz a página se adaptar a telas pequenas (design responsivo em celulares) -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- Título da página do site -->
+
+  <!-- Título exibido na aba do navegador -->
   <title>Início — Semeando Amor</title>
-  <!--Puxando a referência do ícone do site-->
+
+  <!-- Ícone exibido na aba do navegador -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/identidade/favicon.png">
-  <!-- Ícone para iPhone/iPad (aparece ao adicionar o site à tela inicial)  -->
+
+  <!-- Ícone para iPhone/iPad quando o site é adicionado à tela inicial -->
   <link rel="apple-touch-icon" href="assets/img/identidade/favicon.png">
-  <!-- “Puxando o arquivo CSS para fazer a estilização -->
+
+  <!-- Importa o arquivo CSS principal para estilização -->
   <link rel="stylesheet" href="assets/css/main.css">
-  <!-- Puxando o arquivo JavaScript para fazer as funcionalidades -->
+
+  <!-- Importa o JavaScript principal com defer (carrega depois do HTML) -->
   <script defer src="assets/js/main.js"></script>
 </head>
 
-<body id='topo'><a class='skip-link' href='#conteudo'>Pular para o conteúdo</a>
+<body id='topo'>
+  <!-- Link oculto para acessibilidade: permite pular direto para o conteúdo principal -->
+  <a class='skip-link' href='#conteudo'>Pular para o conteúdo</a>
+
+  <!-- Cabeçalho do site (menu e logotipo) -->
   <header class="site-header">
     <div class="container navbar">
+      <!-- Logo da ONG que volta para a página inicial -->
       <a class="brand" href="index.html">
         <img src="assets/img/identidade/logo.png" alt="Logotipo Semeando Amor">
-        <span>Semeando Amor</sp an>
+        <span>Semeando Amor</span>
       </a>
+
+      <!-- Botão que abre/fecha o menu no celular -->
       <button class="menu-btn" data-menu aria-label="Abrir menu">☰ Menu</button>
+
+      <!-- Navegação principal -->
       <nav aria-label="Principal">
         <ul>
+          <!-- Links para as páginas do site -->
           <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="doe.html">Doe Aqui</a></li>
@@ -34,23 +54,33 @@
       </nav>
     </div>
   </header>
+
+  <!-- Seção inicial do site (hero/banner de destaque) -->
   <section class="hero">
-    <div class="bg"></div>
+    <div class="bg"></div> <!-- Fundo decorativo -->
     <div class="container content">
       <span class="badge">ONG Real</span>
-      <!-- Titulo da Página -->
-      <h1>Semeando Amor na Comunidade Nova Liberdade </h1>
+      <!-- Título principal da página -->
+      <h1>Semeando Amor na Comunidade Nova Liberdade </h1>
+      <!-- Descrição inicial -->
       <p>Acolhimento, desenvolvimento humano e segurança alimentar — com amor e participação comunitária.</p>
+
+      <!-- Botões de chamada para ação -->
       <div class="cta">
         <a class="btn" href="doe.html">Doe Agora</a>
         <a class="btn" href="sobre.html">Conhecer a história</a>
       </div>
     </div>
   </section>
+
+  <!-- Conteúdo principal da página -->
   <main id='conteudo' class='container'>
+    <!-- Seção de atividades da ONG -->
     <section class="section" id="inicio">
       <h2>O que fazemos</h2>
       <p class="lead">Acolhimento semanal, ações nas ruas, segurança alimentar e oficinas.</p>
+
+      <!-- Blocos de cards mostrando as atividades -->
       <div class="grid cards">
         <article class="card">
           <div class="body">
@@ -77,35 +107,58 @@
           </div>
         </article>
       </div>
-      <figure class="card" style="margin-top:18px"><img class="img-cover" src="assets/img/galeria/foto-03.png"
-          alt="Equipe Semeando Amor em ação entregando doações"></figure>
+
+      <!-- Imagem ilustrativa -->
+      <figure class="card" style="margin-top:18px">
+        <img class="img-cover" src="assets/img/galeria/foto-03.png"
+          alt="Equipe Semeando Amor em ação entregando doações">
+      </figure>
     </section>
   </main>
+
+  <!-- Rodapé do site -->
   <footer class="site-footer">
     <div class="container footer-grid">
+
+      <!-- Bloco sobre a ONG -->
       <div>
         <h3>Semeando Amor</h3>
         <p>Despertando talentos e promovendo dignidade na Comunidade Nova Esperança (Olaria).</p>
       </div>
+
+      <!-- Bloco de doações -->
       <div>
         <h3>Doações</h3>
-        <p><strong>PIX:</strong> 55168291000113 <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button>
+        <p>
+          <strong>PIX:</strong> 55168291000113
+          <!-- Botão que copia o PIX -->
+          <button class="btn sm copy" onclick="copiarPix(this)">Copiar</button>
         </p>
         <p>Fav.: Associação Semeando Amor • CNPJ 55.168.291/0001-13</p>
         <p>Banco Stone (197) • Ag. 0001 • Conta 40480812-3</p>
       </div>
+
+      <!-- Bloco de contatos -->
       <div>
         <h3>Contato</h3>
-        <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913‑0292</a></p>
-        <p>E‑mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5579999130292" target="_blank" rel="noopener">(79) 99913-0292</a></p>
+        <p>E-mail: <a href="mailto:projetosemeandoamor.aju@gmail.com">projetosemeandoamor.aju@gmail.com</a></p>
         <p>Instagram: <a href="https://instagram.com/semeandoamoraju" target="_blank"
             rel="noopener">@semeandoamoraju</a></p>
       </div>
     </div>
-    <div class="container footer-legal"><small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
+
+    <!-- Aviso legal no rodapé -->
+    <div class="container footer-legal">
+      <small>© 2025 Associação Semeando Amor — Site acadêmico (Jovem Tech).</small>
     </div>
-  </footer><a id="backtop" class="btn secondary backtop" href="#topo" aria-label="Voltar ao topo">↑ Topo</a><a
-    class="btn fab-donate" href="doe.html" aria-label="Doar agora">Doe Agora</a>
+  </footer>
+
+  <!-- Botão para voltar ao topo da página -->
+  <a id="backtop" class="btn secondary backtop" href="#topo" aria-label="Voltar ao topo">↑ Topo</a>
+
+  <!-- Botão fixo de doação que aparece sobre o conteúdo -->
+  <a class="btn fab-donate" href="doe.html" aria-label="Doar agora">Doe Agora</a>
 </body>
 
 </html>
